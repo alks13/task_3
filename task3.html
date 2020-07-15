@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+
+
+//Сортировка
+function Sorting(a, b) {
+  if (a > b) return 1;
+  if (a == b) return 0;
+  if (a < b) return -1;
+};
+
+//Убрать дубли
+function FindUniqueElement() {
+  let  arr = [5,2,3,10,5,2,50,20];
+  arr.sort(Sorting);
+  let ArrNew = [...new Set(arr)];
+  console.log(arr);
+};
+FindUniqueElement();
+
+//Минимальное число
+function MinNumbers(a,b){
+  if (a < b) return a;
+  if (a > b ) return b; 
+};
+console.log(MinNumbers(5,2));
+
+//Возвести в степень 
+function PowNumber(x,n,result){
+  result = x;
+  for(let i = 1; i < n; i++){
+    result *= x;
+  }
+return result;
+};
+console.log(PowNumber(2,4));
+
+</script>	
+</body>
+</html>
